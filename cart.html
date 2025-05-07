@@ -5,46 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Phantom.clothing BW</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+  
 </head>
 <body>
-    <div class="checkout-container">
-        <h1>Checkout Page</h1>
-        <form action="process_payment.php" method="POST">
-            <label for="size">Select Size:</label>
-            <select name="size" id="size" required>
-                <option value="">Select Size</option>
-                <option value="S">Small</option>
-                <option value="M">Medium</option>
-                <option value="L">Large</option>
-                <option value="XL">Extra Large</option>
-            </select>
+    <h2>Checkout Page</h2>
+    <form id="checkoutForm">
+        
+        
+        <label for="size">Select Size:</label>
+        <select name="size" id="size" required>
+            <option value="">Select Size</option>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra Large</option>
+        </select>
+        <br><br>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email">
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <br><br>
 
-            <label for="bank">Select Payment Method:</label>
-            <select name="bank" id="bank" required>
-                <option value="">Select Payment Method</option>
-                <option value="visa">Visa</option>
-                <option value="mastercard">MasterCard</option>
-                <option value="paypal">PayPal</option>
-                <option value="bank_transfer">Bank Transfer</option>
-            </select>
+        
+        <label for="bank">Select Payment Method:</label>
+        <select name="bank" id="bank" required>
+            <option value="">Select Payment Method</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank_transfer">Bank Transfer</option>
+        </select>
+        <br><br>
 
-            <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" required placeholder="Enter card number">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required placeholder="Enter card number">
+        <br><br>
 
-            <label for="expiry">Expiry Date:</label>
-            <input type="month" id="expiry" name="expiry" required>
+        <label for="expiry">Expiry Date:</label>
+        <input type="month" id="expiry" name="expiry" required>
+        <br><br>
 
-            <label for="cvv">CVV:</label>
-            <input type="password" id="cvv" name="cvv" required placeholder="Enter CVV">
+        <label for="cvv">CVV:</label>
+        <input type="password" id="cvv" name="cvv" required placeholder="Enter CVV">
+        <br><br>
 
-            <button type="submit">Complete Checkout</button>
-        </form>
-    </div>
+        <button type="submit">Complete Checkout</button>
+    </form>
+
+    <p id="message"></p>
+    <script src="script.js" defer></script>
+
 </body>
 </html>
+
+             
 
 
 
