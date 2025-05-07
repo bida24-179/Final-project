@@ -79,8 +79,9 @@
     <input type="text" name="phonenumber"><br>
 
     <label for="Country">Country:</label><br>
-    <input type="text"  name="country"><br>
-    <select>
+    <div class="country-container">
+    <input type="text" id="countryInput" name="country" placeholder="Type or Select">
+    <select id="countrySelect" onchange="updateInput()">
         <option value="0">select</option>
         <option value="BW">Botswana</option>
         <option value="ZA">South Africa</option>
