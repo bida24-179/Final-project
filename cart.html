@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        body {
+    body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #f8f9fa;
+    background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .checkout-container {
@@ -39,7 +38,7 @@ form {
 
 label {
     font-weight: bold;
-    text-align: left;
+    text-align: center;
 }
 
 input, select {
@@ -63,9 +62,9 @@ button {
   
 </head>
 <body>
-    <div class="checkout-container">
-        <h1>Checkout Page</h1>
-        <form action="process_payment.php" method="POST">
+    <h2>Checkout Page</h2>
+    <form id="checkoutForm">
+        
             <label for="size">Select Size:</label>
             <select name="size" id="size" required>
                 <option value="">Select Size</option>
@@ -77,6 +76,7 @@ button {
 
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" required placeholder="Enter your email">
+           <br><br>
 
             <label for="bank">Select Payment Method:</label>
             <select name="bank" id="bank" required>
@@ -86,11 +86,17 @@ button {
                 <option value="paypal">PayPal</option>
                 <option value="bank_transfer">Bank Transfer</option>
             </select>
+            <br><br>
+            
             <label for="cardNumber">Card Number:</label>
             <input type="text" id="cardNumber" name="cardNumber" required placeholder="Enter card number">
 
             <label for="expiry">Expiry Date:</label>
             <input type="month" id="expiry" name="expiry" required>
+
+             <label for="section code">section code:</label>
+            <input type="numbers" id="sectionc code" name="section code" required placeholder="Enter card number">
+
 
             <label for="cvv">CVV:</label>
             <input type="password" id="cvv" name="cvv" required placeholder="Enter CVV">
