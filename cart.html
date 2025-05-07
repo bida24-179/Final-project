@@ -1,25 +1,24 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Phantom.clothing BW</title>
-     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-    
-    body {
-    margin: 20px;
-    justify-content: center; 
-    align-items: center; 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
-    display: flex;   
-    background-color: gray;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f8f9fa;
 }
- 
-   .container {
+
+.container {
     width: 100%;
     max-width: 400px;
     padding: 20px;
@@ -27,54 +26,53 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}       
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 
 form {
-    max-width: 400px;
-    padding: 20px;
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: centre;
 }
 
 label {
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 input, select {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    background-color: black;
-    color: gray;
+    width: 100%;
     padding: 10px;
+    background-color: black;
+    color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+}
 
-    </style>
-</head>
-    
-<body>
 
- <main>
-<div class="container" id="about">
-    <br>
-    <br>
-<h2>Check-out</h2>
-<br>
-<p>Pay in various ways.</p>
-    <br>
-       
- </main>
-    
-    <form action="process_payment.php" method="POST">
+
         
+    </style>
     
+</head>
+<body>
+    <h2>Checkout Page</h2>
+    <form id="checkoutForm">
+        
+        
         <label for="size">Select Size:</label>
         <select name="size" id="size" required>
             <option value="">Select Size</option>
@@ -85,25 +83,19 @@ button {
         </select>
         <br><br>
 
-       <label for="email">Phone number:</label>
-        <input type="Phone number" id="email" name="Phone number" required placeholder="Phone number">
-        <br><br>
-
-      
+        
         <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" required placeholder="Enter your email">
         <br><br>
 
-      
-        <label for="bank">Select Payment Option:</label>
+        <!-- Bank Details -->
+        <label for="bank">Select Payment Method:</label>
         <select name="bank" id="bank" required>
             <option value="">Select Payment Method</option>
             <option value="visa">Visa</option>
             <option value="mastercard">MasterCard</option>
-            <option value="Orange money">Orange money</option>
-            <option value="Mascom MyZaka">Mascom MyZaka</option>
-            <option value="Paypal">Paypal</option>
-      
+            <option value="paypal">PayPal</option>
+            <option value="bank_transfer">Bank Transfer</option>
         </select>
         <br><br>
 
@@ -115,17 +107,15 @@ button {
         <input type="month" id="expiry" name="expiry" required>
         <br><br>
 
-         <label for="Security code">Security code:</label>
-        <input type="numbers" id="expiry" name="Security code" required="Enter Security code">
-        <br><br>
-
         <label for="cvv">CVV:</label>
         <input type="password" id="cvv" name="cvv" required placeholder="Enter CVV">
         <br><br>
 
         <button type="submit">Complete Checkout</button>
     </form>
-  
+
+    <p id="message"></p>
+
 </body>
 </html>
 
