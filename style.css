@@ -103,41 +103,8 @@ nav a {
 nav a:hover {
   color: lightblue;
 }
-
 main {
   color: lightblue;
-}
-body {
-    font-family: sans-serif;
-    margin: 20px;
-    align-items: centre;
-}
-
-form {
-    max-width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-}
-
-label {
-    font-weight: bold;
-    text-align:center;
-}
-
-input, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-}
-
-button {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
 }
 
 
