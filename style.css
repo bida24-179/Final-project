@@ -107,23 +107,5 @@ nav a:hover {
 main {
   color: lightblue;
 }
-.country-container {
-    position: relative;
-    display: inline-block;
-    width: 200px;
-}
 
-#countryInput {
-    width: 100%;
-    padding: 8px;
-}
-
-#countrySelect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
 
