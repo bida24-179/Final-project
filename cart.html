@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
+    <title>Checkout page</title>
     <style>
      body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: gray;
     margin: 0;
     padding: 20px;
 }
@@ -40,7 +40,7 @@ input, select {
 }
 
 button {
-    background-color: #28a745;
+    background-color: black;
     color: white;
     padding: 10px;
     width: 100%;
@@ -58,7 +58,7 @@ button:hover {
 </head>
 <body>
 
-    <h2>Checkout Page</h2>
+    <h2>Check-out</h2>
     <form id="checkoutForm">
         <label for="size">Select Size:</label>
         <select id="size" name="size">
@@ -75,16 +75,21 @@ button:hover {
             <option value="mastercard">MasterCard</option>
             <option value="visa">Visa</option>
             <option value="paypal">PayPal</option>
+            <option value="Orange money">Orange money</option>
+            <option value="Mascom myzaka">Mascom myzaka</option>
         </select>
 
         <label for="cardNumber">Card Number:</label>
-        <input type="text" id="cardNumber" name="cardNumber" required>
+        <input type="text" id="cardNumber" name="cardNumber" maxlength="16" required>
+        <button type="button" onclick="toggleCVV()">Show/Hide Card Number</button>
+
 
         <label for="expiry">Expiry Date:</label>
         <input type="month" id="expiry" name="expiry" required>
 
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" required>
+        <label for="Security code">Security code:</label>
+        <input type="text" id="Security code" name="Security code" maxlength="3" required>
+        <button type="button" onclick="toggleCVV()">Show/Hide Security code</button>
 
         <button type="submit">Complete Checkout</button>
         </form>
