@@ -87,9 +87,17 @@ button:hover {
         <input type="text" id="cvv" name="cvv" required>
 
         <button type="submit">Complete Checkout</button>
-        
-    <h1>Checkout Completed!</h1>
-    <p>Thank you for your purchase. You will receive a confirmation email shortly.</p>
+        </form>
+
+    <script>
+        document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Checkout completed successfully!");
+            document.getElementById("checkoutForm").reset();
+        });
+    </script>
+
+    
     <a href="index.html">Return to Homepage</a>
 
 </body>
